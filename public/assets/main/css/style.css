@@ -18,33 +18,35 @@ body {
     font-family: 'Roboto', 'Helvetica', sans-serif; }
 
 main {
-  flex: 1 0 auto; }
+  flex: 1 0 auto;
+ }
+
+.card-profile {
+  width: 50%;
+  height: auto;
+  left: 25%;
+}
+
 
 .card-image .wall-list {
   position: absolute;;
   -webkit-filter: blur(20px);
   -webkit-transition: -webkit-filter .30s;
-  filter: blur(30px);
+  filter: blur(20px);
   transition: filter .30s;
   width: 300px !important;
   height: 300px !important;
 }
 
 .card-image .wall-profile {
-  position: absolute;;
+  position: absolute;
   -webkit-filter: blur(20px);
   -webkit-transition: -webkit-filter .30s;
-  filter: blur(30px);
+  filter: blur(20px);
   transition: filter .30s;
   width: auto;
   height: 600px !important;
 }
-
-/*.card-image {
-  width:  auto;
-  height: 400px;
-  float: center;
-}*/
 
 .card-image .img-type {
   position: absolute;
@@ -105,7 +107,9 @@ main {
 .iphoneMockup {
   height: 550px;
   margin-top: 40px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  margin-right: 300px;
+}
 
 .intro {
   margin-top: 150px;
@@ -126,3 +130,11 @@ main {
 .reactionImg {
   height: 50px;
   margin-right: 5px; }
+
+.home-title {
+  color: #000040;
+}
+
+.gray-text{
+  color: #696969;
+}
