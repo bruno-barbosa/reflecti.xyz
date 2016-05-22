@@ -2,7 +2,7 @@
 
 var app = angular.module('reflectiXYZ');
 
-app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, SweetAlert){
+app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, Wall, SweetAlert){
   console.log('wallViewCtrl');
   $scope.wall = {};
 

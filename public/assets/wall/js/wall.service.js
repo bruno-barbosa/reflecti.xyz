@@ -8,6 +8,10 @@ app.service('Wall', function($http, $q) {
     return $http.get('/walls');
   };
 
+  this.getWallById = (id) => {
+    return $http.get(`walls/${id}`);
+  };
+
   this.edit = wallObj => {
     return $http.post(`/walls/${wallObj.id}`, wallObj);
   };
