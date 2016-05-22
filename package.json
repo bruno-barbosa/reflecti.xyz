@@ -41,6 +41,7 @@
     "mongoose": "^4.4.17",
     "morgan": "^1.7.0",
     "multer": "^1.1.0",
+    "request": "^2.72.0",
     "satellizer": "^0.14.0",
     "uuid": "^2.0.2"
   },
