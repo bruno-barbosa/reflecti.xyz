@@ -26,6 +26,13 @@ exports.analyzeOne = (imgUrl, cb) => {
     body: JSON.stringify(imgObj)
   }, (err, response, body) => {
       if(err) cb(err);
+      console.log('res', response.body);
+      console.log('res.body bol', !!response.body);
+      console.log('length', response.body.length);
+      if(response.body.length === 2){
+        console.log('executed');
+        return cb(null, {'emotion': 'unknown'});
+      }
       response.body = JSON.parse(response.body);
 
       let highestScore = 0;
