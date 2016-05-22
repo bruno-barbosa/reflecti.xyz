@@ -20,12 +20,20 @@ body {
 main {
   flex: 1 0 auto; }
 
-.card-image img {
+.card-image img .wall-list {
   position: absolute;;
   -webkit-filter: blur(20px);
   -webkit-transition: -webkit-filter .30s;
   filter: blur(30px);
   transition: filter .30s;
+  width: 300px !important;
+  height: 300px !important;
+}
+
+.card-image img .wall-view {
+  width:  auto;
+  height: 600px;
+  left: 50%;
 }
 
 .card-image .img-type {
@@ -50,7 +58,7 @@ main {
   border-color: #fff;
 }
 
-.card-image img:active {
+/*.card-image img:active {
   -webkit-filter: none;
   -webkit-transition: -webkit-filter .30s;
   filter: blur(30px);
@@ -58,7 +66,7 @@ main {
 }
 .card-image img:active .img-type {
   display: none;
-}
+}*/
 
 .fb-blue {
   background-color: #3b5998 !important; }
