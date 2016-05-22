@@ -57,16 +57,16 @@
     <nav role="navigation" class="blue">
       <div class="nav-wrapper">
         <div class="container">
-          <a id="logo-container" href="/" class="brand-logo center blue-grey-text"><i class="fa fa-camera-retro" aria-hidden="true"></i></a>
+          <a id="logo-container" href="/" class="brand-logo center "><i class="fa fa-camera-retro" aria-hidden="true"></i></a>
             <ul id="nav-main" class="side-nav">
               <li><a href="/">Home</a></li>
               <li><a href="">Wall</a></li>
             </ul><a href="#" data-activates="nav-main" class="button-collapse show-on-large"><i class="material-icons">menu</i></a></a>
           <ul id="nav-login" class="right">
             <li>
-              <a ng-hide="currentUser" id="loginDrop" href="/" class="blue-grey-text" style="line-height: 64px">Login / Register<i class="material-icons left">person</i></a>
-              <a ng-show="currentUser" id="loginDrop" ui-sref="profile-walls" class="blue-grey-text" style="line-height: 64px">Profile<i class="material-icons left">person</i></a>
-              <a ng-show="currentUser" id="loginDrop" ng-click="logout()" class="blue-grey-text" style="line-height: 64px">Logout</a>
+              <a ng-hide="currentUser" id="loginDrop" href="/" class="" style="line-height: 64px">Login / Register<i class="material-icons left">person</i></a>
+              <a ng-show="currentUser" id="loginDrop" ui-sref="profile-walls" class="" style="line-height: 64px">Profile<i class="material-icons left">person</i></a>
+              <a ng-show="currentUser" id="loginDrop" ng-click="logout()" class="" style="line-height: 64px">Logout</a>
             </li>
           </ul>
         </div>
@@ -122,10 +122,10 @@
     <main>
       <ui-view></ui-view>
     </main>
-    <footer class="page-footer white">
-      <div class="footer-copyright white">
+    <footer class="page-footer blue">
+      <div class="footer-copyright">
         <div class="container center-align">
-          <p class="blue-grey-text">Made with <i style="color:red" class="fa fa-heart"></i> By Reflecti</p>
+          <p class="">Made with <i style="color:red" class="fa fa-heart"></i> By Reflecti</p>
         </div>
       </div>
     </footer>

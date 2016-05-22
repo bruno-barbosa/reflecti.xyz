@@ -20,7 +20,7 @@ body {
 main {
   flex: 1 0 auto; }
 
-.card-image img {
+.card-image img .wall-list {
   position: absolute;;
   -webkit-filter: blur(20px);
   -webkit-transition: -webkit-filter .30s;
@@ -28,6 +28,12 @@ main {
   transition: filter .30s;
   width: 300px !important;
   height: 300px !important;
+}
+
+.card-image img .wall-view {
+  width:  auto;
+  height: 600px;
+  left: 50%;
 }
 
 .card-image .img-type {
