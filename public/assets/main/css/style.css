@@ -107,7 +107,9 @@ main {
 .iphoneMockup {
   height: 550px;
   margin-top: 40px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  margin-right: 300px;
+}
 
 .intro {
   margin-top: 150px;
@@ -128,3 +130,11 @@ main {
 .reactionImg {
   height: 50px;
   margin-right: 5px; }
+
+.home-title {
+  color: #000040;
+}
+
+.gray-text{
+  color: #696969;
+}
