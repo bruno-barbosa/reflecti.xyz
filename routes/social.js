@@ -10,7 +10,6 @@ const User = require('../models/user');
 //  /auth  router
 
 router.post('/facebook', (req, res) => {
-  console.log('req', req);
   const fields = ['id', 'email', 'first_name', 'last_name', 'link', 'name'];
   const accessTokenUrl = 'https://graph.facebook.com/v2.5/oauth/access_token';
   const graphApiUrl = 'https://graph.facebook.com/v2.5/me?fields=' + fields.join(',');
@@ -37,9 +36,13 @@ router.post('/facebook', (req, res) => {
           console.log('createdToken:', token);
           return res.cookie('accessToken', token).send(existingUser._id);
         }
+
         let user = new User();
         user.facebook = profile.id;
-        user.imgurl = 'https://graph.facebook.com/' + profile.id + '/picture?type=large';
+        user.imgurl = `https://graph.facebook.com/${profile.id}/picture?type=large`;
+        user.firstName = profile.first_name;
+        user.lastName = profile.last_name;
+        user.email = profile.email;
         user.save(function() {
           console.log('ID', user._id);
           let token = user.generateToken();
