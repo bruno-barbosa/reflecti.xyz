@@ -40,11 +40,11 @@ main {
   height: 600px !important;
 }
 
-.card-image c {
+/*.card-image {
   width:  auto;
   height: 400px;
   float: center;
-}
+}*/
 
 .card-image .img-type {
   position: absolute;

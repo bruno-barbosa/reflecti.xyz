@@ -2,7 +2,7 @@
 
 var app = angular.module('reflectiXYZ');
 
-app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, wall, SweetAlert){
+app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, wall, SweetAlert, Upload){
   console.log('wallViewCtrl');
   $scope.wall = wall.data;
 
@@ -25,9 +25,9 @@ app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, wall, Sw
         "numFrames": 30
       }, function(obj) {
           if(!obj.error) {
-              var image = obj.image,
-              animatedImage = document.createElement('img');
-              animatedImage.src = image;
+              var image = obj.image;
+              // animatedImage = document.createElement('img');
+              // animatedImage.src = image;
               // document.body.appendChild(animatedImage);
               // document.getElementById('result').appendChild(animatedImage);
               SweetAlert.swal({
@@ -38,8 +38,12 @@ app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, wall, Sw
                 cancelButtonText: 'No. Maybe next time.',
                 confirmButtonText: 'Let\'s post it'
               }, function(isConfirm) {
-                // TODO: redirect user
-              })
+                console.log(image);
+                Upload.upload({
+                  url: `/walls/${wall.data._id}/addReaction`,
+                  data: {newFile: image}
+                });
+              });
           }
       });
       gifshot.stopVideoStreaming();

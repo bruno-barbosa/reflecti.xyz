@@ -34,8 +34,9 @@ router.route('/:id')
     });
 
   router.route('/:id/addReaction')
-    .post(User.authorization(), (req, res) => {
-      Wall.addReaction(req.user._id, req.params.id, req.body, res.handler);
+    .post(User.authorization(), upload.single('newFile'), (req, res) => {
+      console.log(req.user._id, req.params.id, req.file);
+      Wall.addReaction(req.user._id, req.params.id, req.file, res.handler);
     });
 
 module.exports = router;
