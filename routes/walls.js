@@ -3,9 +3,13 @@
 const express = require('express');
 const multer = require('multer');
 const router = express.Router();
+const dataUriToBuffer = require('data-uri-to-buffer');
 
 const upload = multer({
-  storage: multer.memoryStorage()
+  storage: multer.memoryStorage(),
+  limits: {
+    fieldSize: 30000000
+  }
 });
 
 const User = require('../models/user');
@@ -35,8 +39,13 @@ router.route('/:id')
 
   router.route('/:id/addReaction')
     .post(User.authorization(), upload.single('newFile'), (req, res) => {
-      console.log(req.user._id, req.params.id, req.file);
-      Wall.addReaction(req.user._id, req.params.id, req.file, res.handler);
+      let uri = req.body.newFile;
+      let fileObj = {
+        mimetype: 'image/gif',
+        originalname: 'reaction.gif',
+        buffer: dataUriToBuffer(uri)
+      };
+      Wall.addReaction(req.user._id, req.params.id, fileObj, res.handler);
     });
 
 module.exports = router;

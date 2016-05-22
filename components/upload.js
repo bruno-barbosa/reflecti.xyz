@@ -29,7 +29,7 @@ exports.s3 = (file, cb) => {
     Bucket: bucketName,
     Key: key,
     ACL: 'public-read',
-    Body: file.buffer,
+    Body: file.buffer
   };
 
   s3.putObject(params, (err, result) => {

@@ -92,7 +92,6 @@ wallSchema.statics.delete = (userId, wallId, cb) => {
 // ADD REACTIONS
 wallSchema.statics.addReaction = (userId, wallId, reactionObj, cb) => {
   User.findOne({_id: userId}, (err, dbUser) => {
-    console.log(reactionObj);
     if (err || !dbUser) { return cb(err || { error: 'Invalid user.' }); }
 
     // if(err || dbWall._owner.equals(dbUser._id) {
@@ -103,23 +102,23 @@ wallSchema.statics.addReaction = (userId, wallId, reactionObj, cb) => {
       if (err || !dbWall) {
         return cb(err || { error: 'Inexistent wall.' });
       }
-      console.log('test');
-      //Upload.s3(reactionObj, (err, imgUrl) => {
-        Emotion.analyzeOne(reactionObj.image, (err, emotionObj) => {
+
+      Upload.s3(reactionObj, (err, imgUrl) => {
+        Emotion.analyzeOne(imgUrl, (err, emotionObj) => {
 
           let newReaction = {
             reactor: dbUser._id,
-            reactionUrl: reactionObj.image, //imgUrl,
+            reactionUrl: imgUrl, //imgUrl,
             emotion: emotionObj.emotion
           };
 
           dbWall.reactions.push(newReaction);
-          dbWall.save((err, newReaction) => {
-            dbUser._reactions.push(newReaction._id);
-            dbUser.save(cb(newReaction));
+          dbWall.save((err, newWall) => {
+            dbUser._reactions.push(newWall.reactions[newWall.reactions.length - 1]._id);
+            dbUser.save(cb(null, newReaction));
           });
         });
-      //});
+      });
     });
   });
 };
