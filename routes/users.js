@@ -8,6 +8,7 @@ const s3 = require('../components/upload');
 
 // AUTHORIZATION & AUTHENTICATION ROUTES
 router.post('/register', (req, res) => {
+  console.log(req.body);
   User.register(req.body, res.handler);
   console.log(req.body);
 });
@@ -28,7 +29,7 @@ router.use('/social', require('./social'));
 // USER PROFILE ROUTES
 router.route('/profile')
   .get(User.authorization(), (req, res) => {
-    User.find({ username: req.user.username }).populate('auctions').select('-password')
+    User.find({ username: req.user.username }).populate('_walls').select('-password')
       .exec(res.handler);
   })
   .put(User.authorization(), (req, res) => {
