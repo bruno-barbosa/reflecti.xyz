@@ -28,6 +28,8 @@ app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, Wall, Sw
               var image = obj.image,
               animatedImage = document.createElement('img');
               animatedImage.src = image;
+              console.log(animatedImage);
+              
               // document.body.appendChild(animatedImage);
               // document.getElementById('result').appendChild(animatedImage);
               SweetAlert.swal({

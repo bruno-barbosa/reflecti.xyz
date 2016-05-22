@@ -40,12 +40,6 @@ main {
   height: 600px !important;
 }
 
-.card-image c {
-  width:  auto;
-  height: 600px;
-  left: 50%;
-}
-
 .card-image .img-type {
   position: absolute;
   top: 33%;
