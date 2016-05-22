@@ -28,7 +28,7 @@ router.use('/social', require('./social'));
 // USER PROFILE ROUTES
 router.route('/profile')
   .get(User.authorization(), (req, res) => {
-    User.find({ username: req.user.username }).populate('auctions').select('-password')
+    User.find({ username: req.user.username }).populate('_walls').select('-password')
       .exec(res.handler);
   })
   .put(User.authorization(), (req, res) => {
