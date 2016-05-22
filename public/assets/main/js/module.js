@@ -33,7 +33,12 @@ app.config( function($stateProvider, $urlRouterProvider, $authProvider) {
      .state('wall-view', {
        url:'/wall/:id',
        templateUrl: '/assets/wall/html/wall-view.html',
-       controller: 'wallViewCtrl'
+       controller: 'wallViewCtrl',
+       resolve: {
+         wall: function($stateParams, Wall){
+           return Wall.getWallById($stateParams.id);
+         }
+       }
      })
      .state('wall-if-seen', {
        url:'/wall-if-seen/:id',
