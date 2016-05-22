@@ -8,6 +8,7 @@ const s3 = require('../components/upload');
 
 // AUTHORIZATION & AUTHENTICATION ROUTES
 router.post('/register', (req, res) => {
+  console.log(req.body);
   User.register(req.body, res.handler);
   console.log(req.body);
 });
