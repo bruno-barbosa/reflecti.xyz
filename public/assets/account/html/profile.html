@@ -1,37 +1,37 @@
 <div class="row">
 
-    <div class="col s12 profile-header">
-        <div class="frame">
-            <img ng-show="currentUser.imgurl" ng-src="{{currentUser.imgurl}}" onerror="this.src= '//www.drupal.org/files/profile_default.png'" class="profile-pic">
-            <img ng-hide="currentUser.imgurl" src='//www.drupal.org/files/profile_default.png' class="profile-pic">
-                <span class="profile-name">
-                {{currentUser.firstName}} {{currentUser.lastName}}
-                </span>
+  <div class="col s12 profile-header">
+    <div class="frame">
+      <img ng-show="currentUser.imgurl" ng-src="{{currentUser.imgurl}}" onerror="this.src= '//www.drupal.org/files/profile_default.png'" class="profile-pic">
+      <img ng-hide="currentUser.imgurl" src='//www.drupal.org/files/profile_default.png' class="profile-pic">
+      <span class="profile-name">
+      {{currentUser.firstName}} {{currentUser.lastName}}
+      </span>
 
-        </div>
     </div>
+  </div>
 
-    <div class="col s12 nav">
-        <ul class="tabs">
-            <li class="tab col s12"><a ui-sref="profile-walls">Walls</a></li>
-            <li class="tab col s12"><a ui-sref="profile-reactions">Reactions</a></li>
-        </ul>
+  <div class="col s12 nav">
+    <ul class="tabs">
+      <li class="tab col s12"><a ui-sref="profile-walls">Walls</a></li>
+      <li class="tab col s12"><a ui-sref="profile-reactions">Reactions</a></li>
+    </ul>
+  </div>
+
+
+  <div class="col m10 offset-m1">
+
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" ng-src="{{wall.mediaUrl}}">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{wall.title}}<i class="material-icons right">more_vert</i></span>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      </div>
     </div>
-
-
-    <div class="col m10 offset-m1">
-
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" ng-src="{{wall.mediaUrl}}">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">{{wall.title}}<i class="material-icons right">more_vert</i></span>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
