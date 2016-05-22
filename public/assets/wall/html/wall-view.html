@@ -11,16 +11,19 @@
         <i class="fa fa-video-camera" aria-hidden="true"></i>Rec
       </div>
       <div class="card">
-        <div class="card-image waves-effect waves-block waves-light center">
-          <img class="activator" ng-src="{{wall.mediaUrl}}">
+        <div class="card-content black-text">
+          <p style="margin-left:70%; display:inline-block;" class="flow-text">{{wall.title}}</p>
         </div>
-        <!-- <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{wall.title}}<i class="material-icons right">more_vert</i></span>
-        </div> -->
-        <!-- <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
-        </div> -->
+        <div class="card-image">
+          <a href="">
+            <img class="wall-view" ng-src="{{wall.mediaUrl}}" alt="{{wall.caption}}" ui-sref="wall-view({id: wall._id})">
+            <p class="img-type circle flow-text"><{{mediaType |uppercase }}></p>
+          </a>
+        </div>
+        <div class="card-action">
+          <p class="truncate">{{wall.caption}}</p>
+          <p>{{wall.reaction}}</p>
+        </div>
       </div>
 
       <div id="result">

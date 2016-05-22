@@ -18,26 +18,34 @@ body {
     font-family: 'Roboto', 'Helvetica', sans-serif; }
 
 main {
-  flex: 1 0 auto; }
+  flex: 1 0 auto;
+ }
+
+.card-profile {
+  width: 50%;
+  height: auto;
+  left: 25%;
+}
+
 
 .card-image .wall-list {
   position: absolute;;
   -webkit-filter: blur(20px);
   -webkit-transition: -webkit-filter .30s;
-  filter: blur(30px);
+  filter: blur(20px);
   transition: filter .30s;
   width: 300px !important;
   height: 300px !important;
 }
 
 .card-image .wall-profile {
-  position: absolute;;
+  position: absolute;
   -webkit-filter: blur(20px);
   -webkit-transition: -webkit-filter .30s;
-  filter: blur(30px);
+  filter: blur(20px);
   transition: filter .30s;
-  width: auto;
-  height: 600px !important;
+  max-width: 100%;
+  max-height: auto;
 }
 
 .card-image .img-type {

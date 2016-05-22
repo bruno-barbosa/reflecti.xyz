@@ -2,19 +2,19 @@
 
 var app = angular.module('reflectiXYZ');
 
-app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, Wall, SweetAlert){
+app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, wall, SweetAlert){
   console.log('wallViewCtrl');
-  $scope.wall = {};
+  $scope.wall = wall.data;
 
   /////////////// Test Cases ///////////////////
   // $scope.wall.title = "I'm dying";
   // $scope.wall.mediaUrl = 'https://media.giphy.com/media/Zko99XD5cP8By/giphy.gif';
 
 
-  Wall.getWallById($stateParams.id)
-    .then(res => {
-      $scope.wall = res.data;
-    })
+  // Wall.getWallById($stateParams.id)
+  //   .then(res => {
+  //     $scope.wall = res.data;
+  //   })
 
   $scope.takeSnapShot = () => {
       // By default, a user's webcam is used to create the animated GIF
