@@ -11,6 +11,7 @@ app.controller('authCtrl', function($scope, $state, $auth, $rootScope, Auth) {
         Auth.getProfile()
           .then(res => {
             $rootScope.currentUser = res;
+            console.log($rootScope.currentUser);
         }).catch(err => {
           $rootScope.currentUser = null;
           $state.go('home');

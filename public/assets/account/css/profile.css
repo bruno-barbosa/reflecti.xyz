@@ -34,3 +34,11 @@ span {
   top: 300px;
   font-size: 28px;
   color: white; }
+
+.reaction-GIF-box {
+  display: inline-block;
+}
+
+.reaction-GIF {
+  width: 220px;
+}

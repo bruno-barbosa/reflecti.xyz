@@ -31,6 +31,7 @@
     "body-parser": "^1.15.1",
     "bower": "^1.7.9",
     "cookie-parser": "^1.4.1",
+    "data-uri-to-buffer": "0.0.4",
     "dotenv": "^2.0.0",
     "ejs": "^2.4.1",
     "express": "^4.13",

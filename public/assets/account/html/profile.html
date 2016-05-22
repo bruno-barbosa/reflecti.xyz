@@ -31,8 +31,10 @@
           </div>
 
           <div class="card-action">
-            <p class="truncate">{{wall.caption}}</p>
-            <p>{{wall.reaction}}</p>
+            <p class="truncate">{{wall.caption}}</p><br>
+            <div class="reaction-GIF-box" ng-repeat="reaction in wall.reactions">
+              <img class=reaction-GIF ng-src="{{reaction.reactionUrl}}" alt="">
+            </div>
           </div>
         </div>
       </div>
