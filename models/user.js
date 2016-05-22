@@ -12,9 +12,9 @@ const userSchema = new mongoose.Schema({
   imgurl: { type: String },
   firstName: { type: String, trim: true, required: true },
   lastName: { type: String, trim: true },
-  email: { type: String, trim: true, required: true, unique: true, match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please input a valid email address'] },
+  email: { type: String, trim: true, unique: true, required:true, match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please input a valid email address'] },
   facebook: { type: String },
-  password: { type: String, required: true },
+  password: { type: String },
   role: { type: String, default: 'user' },
   _walls: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Wall' }],
   _reactions: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Wall' }]
