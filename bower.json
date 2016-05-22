@@ -1,0 +1,28 @@
+{
+  "name": "reflecti.xyz",
+  "description": "",
+  "main": "www",
+  "authors": [
+    "Bruno Barbosa <bruno@barbosa.io>",
+    "Norbert Szucs <szucs.norbert@outlook>",
+    "Pratik Bhandari <lazy.monk.13@gmail.com>",
+    "Denis Wells <deniswells59@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/bruno-barbosa/reflecti.xyz",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-file-upload": "^12.0.4",
+    "bower": "*",
+    "install": "^1.0.4",
+    "ng-sweet-alert": "^1.0.5",
+    "ngSweetAlert": "angular-sweetalert#^1.1.0"
+  }
+}

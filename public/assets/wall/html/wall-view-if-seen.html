@@ -1,0 +1,38 @@
+
+  <div class="row" style="background: transparent;">
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="col m6 offset-m2">
+      <!-- <span ng-bind-html="emotionUNICODE"></span> -->
+      Posted by: <span>
+        <a href="">
+          @{{wall._owner}}
+        </a>
+      </span>
+    </div>
+    <div class="col m2 right-align">
+      {{wall.title}}
+    </div>
+
+
+    <div class="col m8 offset-m2">
+
+      <div class="card">
+        <div class="card-image waves-effect waves-block waves-light center">
+          <img class="activator" ng-src="{{wall.mediaUrl}}">
+        </div>
+      </div>
+      <div class="reactions">
+        <span ng-repeat="reaction in wall.reactions"><img ng-src="{{ reaction.reactionUrl }}" alt="" class="reactionImg"></span>
+      </div>
+
+      <div id="result">
+
+      </div>
+
+
+    </div>
+  </div>

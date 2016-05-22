@@ -1,0 +1,110 @@
+@charset "UTF-8";
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+  body::before {
+    background-size: cover;
+    background-attachment: fixed;
+    content: '';
+    will-change: transform;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: fixed; }
+  body .custom-blog {
+    font-family: 'Roboto', 'Helvetica', sans-serif; }
+
+main {
+  flex: 1 0 auto; }
+
+.card-image img {
+  position: absolute;;
+  -webkit-filter: blur(20px);
+  -webkit-transition: -webkit-filter .30s;
+  filter: blur(30px);
+  transition: filter .30s;
+}
+
+.card-image .img-type {
+  position: absolute;
+  top: 33%;
+  left: 33%;
+  float: center;
+  font-weight: bolder;
+  z-index: 100;
+}
+
+.circle {
+  width:100px;
+  height:100px;
+  border-radius:100px;
+  font-size:20px;
+  color:#fff;
+  line-height:90px;
+  text-align:center;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #fff;
+}
+
+.card-image img:active {
+  -webkit-filter: none;
+  -webkit-transition: -webkit-filter .30s;
+  filter: blur(30px);
+  transition: filter .30s;
+}
+.card-image img:active .img-type {
+  display: none;
+}
+
+.fb-blue {
+  background-color: #3b5998 !important; }
+
+@media (max-width: 512px) and (min-resolution: 1.5dppx), (max-width: 1024px) and (max-resolution: 1.5dppx) {
+  .landingBg {
+    background-image: url("../img/bg_1024.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 4.0; } }
+
+@media (min-width: 513px) and (max-width: 1024px) and (min-resolution: 1.5dppx), (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx) {
+  .landingBg {
+    background-image: url("../img/bg_2048.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 10.0; } }
+
+@media (min-width: 1025px) and (min-resolution: 1.5dppx), (min-width: 2049px) and (max-resolution: 1.5dppx) {
+  .landingBg {
+    background-image: url("../img/bg_2880.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 10.0; } }
+
+.iphoneMockup {
+  height: 550px;
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
+.intro {
+  margin-top: 150px;
+  margin-left: 100px; }
+
+.storeicon {
+  width: 200px; }
+
+.noBackground {
+  background: transparent; }
+
+.error {
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: rgba(252, 143, 88, 0.91);
+  color: red; }
+
+.reactionImg {
+  height: 50px;
+  margin-right: 5px; }

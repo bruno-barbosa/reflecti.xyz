@@ -1,0 +1,13 @@
+'use strict';
+
+// APP START
+const PORT = process.env.PORT || 3000;
+
+const app = require('./app');
+const http = require('http');
+
+const server = http.createServer(app);
+
+server.listen(PORT, err => {
+  console.log(err || `Server listening on port ${PORT}`);
+});

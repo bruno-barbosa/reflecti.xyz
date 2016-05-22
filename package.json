@@ -1,0 +1,72 @@
+{
+  "name": "reflexi.xyz",
+  "version": "1.0.0",
+  "main": "www",
+  "scripts": {
+    "start": "node www",
+    "postinstall": "bower i",
+    "test": "MOCHA=true mocha tests/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruno-barbosa/reflecti.xyz.git"
+  },
+  "author": [
+    "Bruno Barbosa <bruno@barbosa.io>",
+    "Norbert Szucs <szucs.norbert@outlook>",
+    "Pratik Bhandari <lazy.monk.13@gmail.com>",
+    "Denis Wells <deniswells59@gmail.com>"
+  ],
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/bruno-barbosa/reflecti.xyz/issues"
+  },
+  "engines": {
+    "node": "6.2.0"
+  },
+  "homepage": "https://github.com/bruno-barbosa/reflecti.xyz#readme",
+  "dependencies": {
+    "aws-sdk": "^2.3.14",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.1",
+    "bower": "^1.7.9",
+    "cookie-parser": "^1.4.1",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13",
+    "gify": "^0.2.0",
+    "gulp-concat": "^2.6.0",
+    "jsonwebtoken": "^6.2.0",
+    "moment": "^2.13.0",
+    "mongoose": "^4.4.17",
+    "morgan": "^1.7.0",
+    "multer": "^1.1.0",
+    "satellizer": "^0.14.0",
+    "uuid": "^2.0.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "chai": "^3.5.0",
+    "del": "^2.2.0",
+    "eslint": "^2.10.2",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.0",
+    "eslint-plugin-jsx-a11y": "^1.2.1",
+    "eslint-plugin-react": "^5.1.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.0.7",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-nodemon": "^2.0.7",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "mocha": "^2.4.5"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "description": ""
+}

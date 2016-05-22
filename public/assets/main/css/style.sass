@@ -1,0 +1,347 @@
+body
+  &::before
+    background-size: cover
+    background-attachment: fixed
+    content: ''
+    will-change: transform
+    z-index: -1
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    position: fixed
+  .custom-blog
+    font-family: 'Roboto', 'Helvetica', sans-serif
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+
+main
+  flex: 1 0 auto
+
+.icon-block
+  padding: 0 15px
+  .material-icons
+    font-size: inherit
+
+.modal
+  max-height: 75% !important
+
+.contact-card-template, .modal-select-template, .disabled-form, .initial-message-hide
+  display: none
+
+.fb-blue
+  background-color: #3b5998 !important
+
+@media (max-width: 512px) and (min-resolution: 1.5dppx), (max-width: 1024px) and (max-resolution: 1.5dppx)
+  .landingBg
+    background-image: url('../images/bg_1024.jpg')
+    background-size: cover
+    background-attachment: fixed
+    opacity: 4.0
+
+@media (min-width: 513px) and (max-width: 1024px) and (min-resolution: 1.5dppx), (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)
+  .landingBg
+    background-image: url('../images/bg_2048.jpg')
+    background-size: cover
+    background-attachment: fixed
+    opacity: 10.0
+
+@media (min-width: 1025px) and (min-resolution: 1.5dppx), (min-width: 2049px) and (max-resolution: 1.5dppx)
+  .landingBg
+    background-image: url('../images/bg_2880.jpg')
+    background-size: cover
+    background-attachment: fixed
+    opacity: 10.0
+
+.custom-blog
+  .custom-blog__posts
+    max-width: 900px
+    padding: 0
+    display: flex
+    width: 100%
+    margin: 0 auto
+    flex-shrink: 0
+  &.mdl-layout .mdl-layout__content
+    padding-top: 230px
+    position: relative
+    -webkit-overflow-scrolling: touch
+  .mdl-card
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    min-height: 360px
+  .mdl-card__title
+    padding: 16px
+    flex-grow: 1
+  .mdl-card__media
+    box-sizing: border-box
+    background-size: cover
+    padding: 0px
+    display: flex
+    flex-grow: 1
+    flex-direction: row
+    align-items: flex-end
+    cursor: pointer
+    a
+      color: inherit
+  .mdl-card__title a
+    color: inherit
+  .mdl-card__supporting-text
+    width: 100%
+    padding: 16px
+    min-height: 64px
+    display: flex
+    align-items: center
+    strong
+      font-weight: 400
+  .mdl-card__media ~ .mdl-card__supporting-text
+    min-height: 64px
+  .mdl-card__supporting-text:not(:last-child)
+    box-sizing: border-box
+    min-height: 76px
+  &:not(.custom-blog--blogpost) .mdl-card__supporting-text ~ .mdl-card__supporting-text
+    border-top: 1px solid rgba(0, 0, 0, 0.1)
+  .mdl-card__actions:first-child
+    margin-left: 0
+  .meta
+    box-sizing: border-box
+    padding: 16px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    height: auto
+    > .meta__favorites
+      flex-direction: row
+      margin: 0 8px
+      font-size: 13px
+      font-weight: 500
+      .material-icons
+        font-size: 2em
+        cursor: pointer
+        margin-left: 12px
+  .mdl-card .meta.meta--fill
+    justify-content: space-between
+  .meta > *
+    &:first-child
+      margin-right: 16px
+    display: flex
+    flex-direction: column
+  &.is-small-screen .custom-blog__posts > .mdl-card
+    &.coffee-pic
+      order: 0
+    &.something-else
+      order: -1
+  .something-else
+    .mdl-card__media
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      font-size: 13px
+      font-weight: 500
+      border-top-left-radius: 2px
+      border-top-right-radius: 2px
+      img
+        width: 64px
+        height: 64px
+        margin-bottom: 10px
+    > button
+      position: absolute
+      top: 0
+      right: 28px
+      transform: translate(0px, -28px)
+    .mdl-card__supporting-text
+      background-color: #F5F5F5
+      border-bottom-left-radius: 2px
+      border-bottom-right-radius: 2px
+  .on-the-road-again .mdl-card__media
+    background-image: url('images/road.jpg')
+  .shopping .mdl-card__media
+    background-image: url('images/shopping.jpg')
+  .custom-blog__posts > .custom-nav
+    margin: 12px 15px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    color: white
+    font-weight: 500
+    > .custom-nav__button
+      color: white
+      text-decoration: none
+    .mdl-button
+      color: rgba(0, 0, 0, 0.54)
+      background-color: white
+    > .custom-nav__button
+      &:first-child .mdl-button
+        margin-right: 16px
+      &:last-child .mdl-button
+        margin-left: 16px
+  .mdl-card
+    > a
+      color: inherit
+      text-decoration: none
+      font-weight: inherit
+    h3
+      margin: 0
+      a
+        text-decoration: none
+      &.quote
+        &:before, &:after
+          display: block
+          font-size: 3em
+          margin-top: 0.5em
+        &:before
+          content: '“'
+        &:after
+          content: '”'
+
+.custom-blog--blogpost
+  .custom-header
+    background-color: transparent
+  .custom-blog__posts > .mdl-card .mdl-card__media
+    background-image: url('images/road_big.jpg')
+    height: 280px
+  .comments
+    background-color: #EEE
+  .meta
+    > *
+      align-items: center
+    + .mdl-card__supporting-text
+      border: 0
+      display: flex
+      flex-direction: column
+      p
+        max-width: 512px
+        margin: 5px auto
+        font-size: 16px
+        line-height: 28px
+  .comments
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: stretch
+    padding: 32px
+    box-sizing: border-box
+    > form
+      display: flex
+      flex-direction: row
+      margin-bottom: 16px
+      .mdl-textfield
+        flex-grow: 1
+        margin-right: 16px
+        color: rgb(97, 97, 97)
+        .mdl-textfield__input
+          font-family: 'Roboto', 'Helvetica', sans-serif
+        input, textarea
+          resize: none
+      button
+        margin-top: 20px
+        background-color: rgba(0, 0, 0, 0.24)
+        color: white
+    .comment
+      display: flex
+      flex-direction: column
+      align-items: stretch
+      >
+        .comment__header
+          display: flex
+          flex-direction: row
+          align-items: center
+          margin-bottom: 16px
+          >
+            .comment__avatar
+              width: 48px
+              height: 48px
+              border-radius: 24px
+              margin-right: 16px
+            .comment__author
+              flex-grow: 1
+              display: flex
+              flex-direction: column
+        .comment__text
+          line-height: 1.5em
+        .comment__actions
+          display: flex
+          flex-direction: row
+          justify-content: flex-start
+          align-items: center
+          font-size: 0.8em
+          margin-top: 16px
+          button
+            margin-right: 16px
+            color: rgba(0, 0, 0, 0.24)
+        .comment__answers
+          padding-top: 32px
+          padding-left: 48px
+  .custom-back
+    position: absolute
+    top: 16px
+    left: 16px
+    color: white
+    z-index: 9999
+
+/* Workaround for Firefox.
+ * User agent stylesheet kept overwriting the font in FF only.
+
+.custom-blog
+  .section-spacer
+    flex-grow: 1
+  .something-else
+    overflow: visible
+    z-index: 10
+  .amazing .mdl-card__title
+    background-color: #263238
+  .minilogo
+    width: 44px
+    height: 44px
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 50%
+    border-radius: 22px
+    background-color: #F5F5F5
+
+/* Fixes for IE 10
+
+.mdl-grid
+  display: flex !important
+
+.social-btn__share
+  color: rgba(0, 0, 0, 0.54)
+  background: transparent
+
+.custom-blog .mdl-mini-footer
+  margin-top: 80px
+  height: 120px
+  padding: 40px
+  align-items: center
+  background-color: white
+  box-sizing: border-box
+
+
+.iphoneMockup
+  height: 550px
+  margin-top: 40px
+  margin-bottom: 40px
+
+.intro
+  margin-top: 150px
+  margin-left: 100px
+
+.storeicon
+  width: 200px
+
+.noBackground
+  background: transparent
+
+.error
+  padding: 5px
+  margin-bottom: 10px
+  background-color: rgba(252, 143, 88, 0.91)
+  color: red
+
+.reactionImg
+  height: 50px
+  margin-right: 5px
