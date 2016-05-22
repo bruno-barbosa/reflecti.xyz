@@ -32,8 +32,8 @@ main {
 
 .card-image img .wall-view {
   width:  auto;
-  height: 600px;
-  left: 50%;
+  height: 400px;
+  float: center;
 }
 
 .card-image .img-type {
