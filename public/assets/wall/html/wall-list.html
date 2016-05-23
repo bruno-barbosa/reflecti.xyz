@@ -13,7 +13,7 @@
                   <input type="text" placeholder="Caption" required="" aria-required="true" ng-model="newPost.caption" class="validate">
                 </div>
                 <div class="input-field">
-                  <a  name="newFile" class="waves-effect waves-blue btn-flat text-grey" ng-model="newPost.mediaUrl" ngf-select ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB">Upload File</a>  <img ngf-thumbnail="newPost.mediaUrl || '/thumb.jpg'">
+                  <a name="newFile" class="waves-effect waves-blue btn-flat text-grey" ng-model="newPost.mediaUrl" ngf-select ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB">Upload File <img src="http://icons.iconarchive.com/icons/custom-icon-design/mono-general-4/128/upload-icon.png" alt="" style="width:20px; margin-left:10px; position:relative; top:-1px"></a>
                 </div>
                 <br/>
                 <div class="center">
@@ -40,12 +40,12 @@
         <div class="col s12 m4" ng-repeat="post in posts">
           <div class="card hoverable">
             <div class="card-content black-text">
-              <p style="margin-left:70%; display:inline-block;" class="flow-text">{{post.title}}</p>
+              <p class="flow-text">{{post.title}}</p>
             </div>
 
             <div class="card-image">
               <a ui-sref="wall-view({id:post._id})">
-                <img class="wall-list" src="{{post.mediaUrl}}" alt="{{post.caption}}">
+                <img class="wall-list" src="{{post.mediaUrl}}" alt="{{post.caption}}" style="max-width:150px;height:auto; position:relative; left: 40px">
                 <p class="img-type circle flow-text"><{{mediaType |uppercase }}></p>
               </a>
             </div>
