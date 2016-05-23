@@ -18,7 +18,9 @@ app.controller('authCtrl', function($scope, $state, $auth, $rootScope, Auth) {
     Auth.login($scope.user)
       .then(res => {
         $rootScope.currentUser = res;
-        $state.go('profile-walls');
+        console.log('TEST');
+        $('.webui-popover').webuiPopover('hide');
+        $state.go('wall-list');
       })
       .catch(err => {
         $scope.error = err;
@@ -29,7 +31,9 @@ app.controller('authCtrl', function($scope, $state, $auth, $rootScope, Auth) {
   	$auth.authenticate(provider)
   		.then(function(res) {
   		$rootScope.currentUser = res.data;
-  		$state.go('profile-walls');
+      console.log('TEST');
+      $('.webui-popover').webuiPopover('hide');
+  		$state.go('wall-list');
   	})
   		.catch(function(response) {
   		// Something went wrong.
