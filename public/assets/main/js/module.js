@@ -48,7 +48,12 @@ app.config( function($stateProvider, $urlRouterProvider, $authProvider) {
      .state('wall-if-seen', {
        url:'/wall-if-seen/:id',
        templateUrl: '/assets/wall/html/wall-view-if-seen.html',
-       controller: 'wallviewifseenCtlr'
+       controller: 'wallviewifseenCtlr',
+       resolve: {
+         wall: function($stateParams, Wall){
+           return Wall.getWallById($stateParams.id);
+         }
+       }
      });
      $urlRouterProvider.otherwise('/');
 });
