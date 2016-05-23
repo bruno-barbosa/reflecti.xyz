@@ -27,6 +27,15 @@ main {
   left: 25%;
 }
 
+.card-content.welcome.gray-text {
+    padding-top: 0;
+}
+
+.welcome-title {
+    color: white;
+    background-color: rgba(33, 150, 243, 0.72);
+    padding: 10px;
+}
 
 .card-image .wall-list {
   position: absolute;;
@@ -79,6 +88,24 @@ main {
 .card-image img:active .img-type {
   display: none;
 }*/
+
+footer.page-footer.blue.darken-4 {
+    margin-top: 0;
+}
+
+.reaction-emotion.happy {
+    background-color: rgba(255, 214, 0, 0.97);
+    color: #02AB58;
+}
+.reaction-emotion.sadness {
+    background-color: #00C2FF;
+    color: white;
+}
+
+.reaction-emotion.anger,  .reaction-emotion.fear {
+    background-color: red;
+}
+
 
 .fb-blue {
   background-color: #3b5998 !important; }
