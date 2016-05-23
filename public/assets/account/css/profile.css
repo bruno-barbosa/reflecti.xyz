@@ -1,17 +1,17 @@
 img.profile-pic {
   height: 150px;
   border-radius: 400px;
-  margin-top: 125px;
+  margin-top: 225px;
   margin-left: 55px; }
 
 .profile-header {
   background-color: #d0d0d0;
-  height: 300px;
+  height: 400px;
   background-image: url(); }
 
 span.profile-name {
   position: absolute;
-  top: 250px;
+  top: 350px;
   left: 235px;
   font-size: 28px;
   color: white; }
@@ -29,18 +29,22 @@ ul.tabs {
   margin-right: 10px;
   margin-left: 35px; }
 
-span {
-  position: absolute;
-  top: 300px;
-  font-size: 28px;
-  color: white; }
-
 .reaction-GIF-box {
   display: inline-block;
 }
 
 .reaction-GIF {
-  width: 220px;
+  width: 100px;
+  padding-left: 5px;
+  z-index: 1
+}
+
+.reaction-GIF-box .reaction-emotion {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  z-index: 100;
+  color: #FFF;
 }
 
 a.btn-floating.btn-large.waves-effect.waves-light.green.pull-right {

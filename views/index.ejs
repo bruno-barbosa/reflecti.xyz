@@ -54,7 +54,7 @@
 
   </head>
   <body ng-controller="mainCtrl">
-    <nav role="navigation" class="blue">
+    <nav role="navigation" class="blue darken-4">
       <div class="nav-wrapper">
         <div class="container">
           <a id="logo-container" href="/" class="brand-logo center "><i class="fa fa-camera-retro" aria-hidden="true"></i></a>
@@ -65,8 +65,8 @@
           <ul id="nav-login" class="right">
             <li>
               <a ng-hide="currentUser" id="loginDrop" href="/" class="" style="line-height: 64px">Login / Register<i class="material-icons left">person</i></a>
-              <a ng-show="currentUser" id="loginDrop" ui-sref="profile-walls" class="" style="line-height: 64px">Profile<i class="material-icons left">person</i></a>
-              <a ng-show="currentUser" id="loginDrop" ng-click="logout()" class="" style="line-height: 64px">Logout</a>
+              <a ng-show="currentUser" ui-sref="profile-walls" class="" style="line-height: 64px">Profile<i class="material-icons left">person</i></a>
+              <a ng-show="currentUser" ng-click="logout()" class="" style="line-height: 64px">Logout</a>
             </li>
           </ul>
         </div>
@@ -122,7 +122,7 @@
     <main>
       <ui-view></ui-view>
     </main>
-    <footer class="page-footer blue">
+    <footer class="page-footer blue darken-4">
       <div class="footer-copyright">
         <div class="container center-align">
           <p class="">Made with <i style="color:red" class="fa fa-heart"></i> By Reflecti</p>
