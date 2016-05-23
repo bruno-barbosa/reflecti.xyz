@@ -38,7 +38,15 @@
             <p class="truncate">{{wall.caption}}</p><br>
             <div class="reaction-GIF-box" ng-repeat="reaction in wall.reactions">
               <img class="reaction-GIF" ng-src="{{reaction.reactionUrl}}" alt="{{reaction.emotion}}">
-
+              <div ng-if="reaction.emotion === 'happiness'" class="reaction-emotion happy">{{reaction.emotion | titlecase}}</div>
+              <div ng-if="reaction.emotion === 'anger'" class="reaction-emotion anger">{{reaction.emotion | titlecase}}</div>
+              <div ng-if="reaction.emotion === 'disgust'" class="reaction-emotion disgust">{{reaction.emotion | titlecase}}</div>
+              <div ng-if="reaction.emotion === 'neutral'" class="reaction-emotion neutral">{{reaction.emotion | titlecase}}</div>
+              <div ng-if="reaction.emotion === 'contempt'" class="reaction-emotion contempt">{{reaction.emotion | titlecase}}</div>
+              <div ng-if="reaction.emotion === 'fear'" class="reaction-emotion fear">{{reaction.emotion | titlecase}}</div>
+              <div ng-if="reaction.emotion === 'sadness'" class="reaction-emotion sadness">{{reaction.emotion | titlecase}}</div>
+              <div ng-if="reaction.emotion === 'surprise'" class="reaction-emotion surprise">{{reaction.emotion | titlecase}}</div>
+              <div ng-if="reaction.emotion === 'unknown'" class="reaction-emotion neutral">{{reaction.emotion | titlecase}}</div>
             </div>
           </div>
         </div>
@@ -46,11 +54,9 @@
     </div>
   </div>
 
-
-
   <div id="profileEditForm" class="webui-popover-content">
     <div class="row">
-      <div id="edit" class="col s12">
+      <div class="col s12">
         <form ng-submit="editSubmit()">
           <div class="input-field">
             <input type="text" placeholder="First Name" required="" aria-required="true" ng-model="edit.firstName" class="validate">

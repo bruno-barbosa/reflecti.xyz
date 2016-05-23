@@ -2,13 +2,14 @@
 
 var app = angular.module('reflectiXYZ');
 
-app.controller('profileCtrl', function($scope, $state, $rootScope, Auth, Profile) {
+app.controller('profileCtrl', function($scope, $state, $rootScope, profile, Profile) {
 
-  // $scope.currentUser = Auth.currentUser;
-  $scope.edit = angular.copy($scope.currentUser);
+  $scope.edit = angular.copy(profile);
 
   $('#profileEditDrop').webuiPopover({
-      url: '#profileEditForm'  });
+      url: '#profileEditForm',
+      animation:'pop'
+  });
 
   $scope.editSubmit = () => {
     console.log('yo');
