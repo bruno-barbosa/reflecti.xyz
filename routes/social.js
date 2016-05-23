@@ -37,17 +37,21 @@ router.post('/facebook', (req, res) => {
           return res.cookie('accessToken', token).send(existingUser._id);
         }
 
-        let user = new User();
-        user.facebook = profile.id;
-        user.imgurl = `https://graph.facebook.com/${profile.id}/picture?type=large`;
-        user.firstName = profile.first_name;
-        user.lastName = profile.last_name;
-        user.email = profile.email;
-        user.save(function() {
-          console.log('ID', user._id);
-          let token = user.generateToken();
-          res.cookie('accessToken', token).send(user._id);
-        });
+        var imageReq = `https://graph.facebook.com/${profile.id}/picture?type=large`;
+        request.get({ url: imageReq, qs: accessToken}, function(err, response, profileImage) {
+          let user = new User();
+          user.facebook = profile.id;
+          user.imgurl = response.request.uri.href;
+          user.firstName = profile.first_name;
+          user.lastName = profile.last_name;
+          user.email = profile.email;
+          user.save(function() {
+            console.log('ID', user._id);
+            let token = user.generateToken();
+            res.cookie('accessToken', token).send(user._id);
+          });
+        })
+
       });
     });
   });
