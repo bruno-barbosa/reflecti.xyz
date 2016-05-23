@@ -19,9 +19,8 @@ app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, wall, Sw
   $scope.takeSnapShot = () => {
       // By default, a user's webcam is used to create the animated GIF
       gifshot.createGIF({
-        'interval': 0.35,
+        'interval': 0.15,
         'keepCameraOn': true,
-        "interval": 0.05,
         "numFrames": 30
       }, function(obj) {
           if(!obj.error) {
@@ -38,7 +37,6 @@ app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, wall, Sw
                 cancelButtonText: 'No. Maybe next time.',
                 confirmButtonText: 'Let\'s post it'
               }, function(isConfirm) {
-                console.log('image', image);
                 Upload.upload({
                   url: `/walls/${wall.data._id}/addReaction`,
                   data: {newFile: image}
@@ -52,5 +50,5 @@ app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, wall, Sw
       gifshot.stopVideoStreaming();
   }
 
-  $timeout($scope.takeSnapShot(), 3000);
+  $timeout($scope.takeSnapShot(), 1800);
 });

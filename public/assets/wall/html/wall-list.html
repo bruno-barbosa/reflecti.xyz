@@ -2,9 +2,9 @@
   <div class="custom-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
     <div class="container" style="margin-top:10px">
       <div class="row">
-        <div class="col s12 m4">
+        <div class="col s12 m6">
           <div class="card">
-            <h3 class="welcome-title">Post</h3>
+            <h6 class="welcome-title">Post</h6>
             <div class="card-content">
               <form ng-submit="newWallPost()">
                 <div class="input-field">
@@ -13,12 +13,12 @@
                 <div class="input-field">
                   <input type="text" placeholder="Caption" required="" aria-required="true" ng-model="newPost.caption" class="validate">
                 </div>
-                <div class="input-field">
+                <div class="input-field center">
                   <a name="newFile" class="waves-effect waves-blue btn-flat text-grey" ng-model="newPost.mediaUrl" ngf-select ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB">Upload File <img src="http://icons.iconarchive.com/icons/custom-icon-design/mono-general-4/128/upload-icon.png" alt="" style="width:20px; margin-left:10px; position:relative; top:-1px"></a>
                 </div>
                 <br/>
                 <div class="center">
-                  <button type="submit" class="btn waves-effect waves-light blue waves">Post<i class="material-icons left">send</i></button>
+                  <button style="background-color:#F2385A" type="submit" class="btn waves-effect waves-light waves">Post<i class="material-icons left">send</i></button>
                   <br/>
                   <pre>{{postErr}}</pre>
                 </div>
@@ -26,14 +26,14 @@
             </div>
           </div>
         </div>
-        <div class="col s12 m8">
-          <div class="card" style="min-height: 405px">
-            <h3 class="welcome-title">Welcome</h3>
+        <div class="col s12 m6">
+          <div class="card" style="min-height: 380px">
+            <h6 class="welcome-title">Welcome</h6>
             <div class="card-content welcome gray-text">
-              <h2 class="flow-text">Hi we are Reflecti XYZ...</h2>
-              <p class="flow-text">The future of social interaction is here, long gone are the days of likes. Here at Reflecti interactions are real.</p><br/>
-              <p class="flow-text">Each post comment is the person's true reactions to that post.</p><br/><br/>
-              <p class="flow-text"> Go on Start Interacting!</p>
+              <h6 class="flow-text" style="font-size:17px">Hi we are Reflecti XYZ...</h6>
+              <p class="flow-text" style="font-size:17px">The future of social interaction is here, long gone are the days of likes. Here at Reflecti interactions are real.</p><br/>
+              <p class="flow-text" style="font-size:17px">Each post comment is the person's true reactions to that post.</p><br/><br/>
+              <p class="flow-text" style="font-size:17px"> Go on Start Interacting!</p>
             </div>
           </div>
         </div>

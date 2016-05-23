@@ -50,13 +50,14 @@
     <script src="/assets//wall/js/wall.service.js" charset="utf-8"></script>
     <script src="/assets//wall/js/wall-view.controller.js" charset="utf-8"></script>
     <script src="/assets/wall/js/wall-view-if-seen.controller.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
   </head>
-  <body ng-controller="mainCtrl">
-    <nav role="navigation" class="blue darken-4">
+  <body ng-controller="mainCtrl" style="font-family: 'Montserrat', sans-serif;">
+    <nav role="navigation" class="blue darken-4" style="background-color:#F5A503; font-family: 'Montserrat', sans-serif;">
       <div class="nav-wrapper">
         <div class="container">
-          <a id="logo-container" href="/" class="brand-logo center "><i class="fa fa-camera-retro" aria-hidden="true"></i></a>
+          <a id="logo-container" class="brand-logo center "><i class="fa fa-camera-retro" aria-hidden="true"></i></a>
             <ul id="nav-main" class="side-nav">
               <li><a href="/">Home</a></li>
               <li><a ui-sref="wall-list">Wall</a></li>
@@ -111,7 +112,6 @@
                 </div>
                 <div class="center">
                   <button type="button" class="btn waves-effect waves-light blue waves" ng-click="registerSubmit()">Register<i class="material-icons left">send</i></button>
-                  <button type="button" class="btn waves-effect waves-light fb-blue">Facebook<i class="fa fa-facebook left" aria-hidden="true"></i></button>
                 </div>
               </form>
             </div>
@@ -123,7 +123,7 @@
     </main>
     <footer class="page-footer blue darken-4">
       <div class="footer-copyright">
-        <div class="container center-align">
+        <div class="container center-align" style="color:#E9F1DF">
           <p class="">Made with <i style="color:red" class="fa fa-heart"></i> By Reflecti</p>
         </div>
       </div>

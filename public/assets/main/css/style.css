@@ -2,7 +2,7 @@
 body {
   display: flex;
   min-height: 100vh;
-  flex-direction: column; }
+  flex-direction: column;}
   body::before {
     background-size: cover;
     background-attachment: fixed;
@@ -111,9 +111,9 @@ footer.page-footer.blue.darken-4 {
 .fb-blue {
   background-color: #3b5998 !important; }
 
-@media (max-width: 512px) and (min-resolution: 1.5dppx), (max-width: 1024px) and (max-resolution: 2.5dppx) {
+/*@media (max-width: 512px) and (min-resolution: 1.5dppx), (max-width: 1024px) and (max-resolution: 2.5dppx) {
   .landingBg {
-    background-image: url("../img/bg_1024.jpg");
+    background-image: url("../img/bg.jpg");
     height: 200%;
     background-size: cover;
     background-attachment: fixed;
@@ -121,7 +121,7 @@ footer.page-footer.blue.darken-4 {
 
 @media (min-width: 513px) and (max-width: 1024px) and (min-resolution: 1.5dppx), (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 2.5dppx) {
   .landingBg {
-    background-image: url("../img/bg_2048.jpg");
+    background-image: url("../img/bg.jpg");
     height: 200%;
     background-size: cover;
     background-attachment: fixed;
@@ -129,11 +129,16 @@ footer.page-footer.blue.darken-4 {
 
 @media (min-width: 1025px) and (min-resolution: 1.5dppx), (min-width: 2049px) and (max-resolution: 2.5dppx) {
   .landingBg {
-    background-image: url("../img/bg_2880.jpg");
+    background-image: url("../img/bg.jpg");
     height: 200%;
     background-size: cover;
     background-attachment: fixed;
-    opacity: 10.0; } }
+    opacity: 10.0; } }*/
+
+.landingBg {
+  background-image: url("../img/bg.jpeg");
+  background-size: 95%;
+}
 
 .iphoneMockup {
   height: 550px;
@@ -168,4 +173,28 @@ footer.page-footer.blue.darken-4 {
 
 .gray-text{
   color: #696969;
+}
+
+nav .nav-wrapper {
+  background-color: #F5A503;
+}
+
+.fa-camera-retro:before, #loginDrop, nav i, a {
+  color: #E9F1DF ;
+}
+
+footer.page-footer.blue.darken-4 {
+    background-color: #F5A503 !important;
+}
+
+.welcome-title {
+  background-color: #F5A503 !important;
+}
+
+.blue {
+    background-color: #4AD9D9 !important;
+}
+
+#register, #login {
+  color: #F2385A !important;
 }
