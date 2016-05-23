@@ -2,20 +2,19 @@
 
 var app = angular.module('reflectiXYZ');
 
-app.controller('profileCtrl', function($scope, $state, $rootScope, Profile) {
+app.controller('profileCtrl', function($scope, $state, $rootScope, Auth, Profile) {
 
-  // $scope.edit = angular.copy($scope.currentUser);
-  // console.log('$scope.edit:', $scope.$parent.currentUser);
-  console.log($rootScope.currentUser);
-  $('#addPicDrop').webuiPopover({
-      url: '#addPicForm'  });
+  $scope.currentUser = Auth.currentUser;
+  $scope.edit = angular.copy($scope.currentUser);
 
-  $scope.addProfilePic = () => {
+  $('#profileEditDrop').webuiPopover({
+      url: '#profileEditForm'  });
+
+  $scope.editSubmit = () => {
+    console.log('yo');
     Profile.edit($scope.edit)
       .then(res => {
-        $rootScope.currentUser = res;
+        $scope.currentUser = res;
       });
   };
-
-
 });

@@ -42,3 +42,8 @@ span {
 .reaction-GIF {
   width: 220px;
 }
+
+a.btn-floating.btn-large.waves-effect.waves-light.green.pull-right {
+    margin-top: 30px;
+    margin-right: 30px;
+}

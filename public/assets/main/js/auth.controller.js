@@ -4,20 +4,19 @@ var app = angular.module('reflectiXYZ');
 
 app.controller('authCtrl', function($scope, $state, $auth, $rootScope, Auth) {
 
-  $rootScope.$on('$stateChangeStart',
-    function(event, toState, toParams, fromState, fromParams){
-      $rootScope.currentState = toState.name;
-      if(event.name === '$stateChangeStart'){
-        Auth.getProfile()
-          .then(res => {
-            $rootScope.currentUser = res;
-            console.log($rootScope.currentUser);
-        }).catch(err => {
-          $rootScope.currentUser = null;
-          $state.go('home');
-        });
-    }
-  });
+  // $rootScope.$on('$stateChangeStart',
+  //   function(event, toState, toParams, fromState, fromParams){
+  //     $rootScope.currentState = toState.name;
+  //     if(event.name === '$stateChangeStart'){
+  //       Auth.getProfile();
+  //       //   .then(res => {
+  //       //     this.currentUser = res;
+  //       // }).catch(err => {
+  //       //     this.currentUser = null;
+  //       //     $state.go('home');
+  //       // });
+  //   }
+  // });
 
   $scope.registerSubmit = () => {
     Auth.register($scope.newUser)

@@ -28,8 +28,7 @@ app.service('Auth', function($http, $q) {
   this.getProfile = () => {
     return $http.get('/users/profile')
       .then(res => {
-        this.currentUser = res.data;
-        return $q.resolve(res.data[0]);
+        this.currentUser = res.data[0];
       })
       .catch(res => {
         this.currentUser = null;

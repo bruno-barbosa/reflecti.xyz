@@ -1,8 +1,12 @@
   <div class="row">
 
-    <div class="col s12 profile-header">
+    <div class="col s12 profile-header" back-img="{{currentUser.backgroundImgurl}}">
+      <a id="profileEditDrop"
+      class="btn-floating btn-large waves-effect waves-light green pull-right">
+        <i class="large material-icons">mode_edit</i>
+      </a>
       <div class="frame">
-        <img ng-show="currentUser.imgurl" ng-src="{{currentUser.imgUrl}}" onerror="this.src= '//www.drupal.org/files/profile_default.png'" class="profile-pic">
+        <img ng-show="currentUser.imgurl" ng-src="{{currentUser.imgurl}}" onerror="this.src= '//www.drupal.org/files/profile_default.png'" class="profile-pic">
         <img ng-hide="currentUser.imgurl" src='//www.drupal.org/files/profile_default.png' class="profile-pic">
         <span class="profile-name">
           {{currentUser.firstName}} {{currentUser.lastName}}
@@ -39,5 +43,31 @@
         </div>
       </div>
     </div>
+  </div>
 
+
+
+  <div id="profileEditForm" class="webui-popover-content">
+    <div class="row">
+      <div id="edit" class="col s12">
+        <form ng-submit="editSubmit()">
+          <div class="input-field">
+            <input type="text" placeholder="First Name" required="" aria-required="true" ng-model="edit.firstName" class="validate">
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Last Name" ng-model="edit.lastName" class="validate">
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Profile Image" ng-model="edit.imgurl" class="validate">
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Background Image" ng-model="edit.backgroundImgurl" class="validate">
+          </div>
+          <div class="center">
+            <div ng-show="error" class="error">{{error}}</div>
+            <button type="button" ng-click="editSubmit()" class="btn waves-effect waves-light fb-blue">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>

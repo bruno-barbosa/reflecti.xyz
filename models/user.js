@@ -10,6 +10,7 @@ const JWT_SECRET = process.env.JWT_SECRET;
 // SETS USER SCHEMA
 const userSchema = new mongoose.Schema({
   imgurl: { type: String },
+  backgroundImgurl: { type: String },
   firstName: { type: String, trim: true, required: true },
   lastName: { type: String, trim: true },
   email: { type: String, trim: true, unique: true, required:true, match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please input a valid email address'] },
@@ -53,11 +54,11 @@ userSchema.statics.edit = (userId, userObj, cb) => {
 
       dbUser.firstName = userObj.firstName;
       dbUser.lastName = userObj.lastName;
-      dbUser.email = userObj.email;
+      dbUser.backgroundImgurl = userObj.backgroundImgurl;
       dbUser.imgurl = userObj.imgurl;
 
       dbUser.save(cb);
-  });
+  }).populate('_walls');
 };
 
 // VERIFY USER AUTHENTICATION
