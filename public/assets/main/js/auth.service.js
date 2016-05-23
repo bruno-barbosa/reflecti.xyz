@@ -2,9 +2,7 @@
 
 var app = angular.module('reflectiXYZ');
 
-app.service('Auth', function($http, $q) {
-
-  
+app.service('Auth', function($http, $q, $rootScope) {
 
   this.register = userObj => {
     return $http.post('/users/register', userObj);
@@ -30,7 +28,8 @@ app.service('Auth', function($http, $q) {
   this.getProfile = () => {
     return $http.get('/users/profile')
       .then(res => {
-        this.currentUser = res.data[0];
+        // this.currentUser = res.data[0];
+        // $rootScope.currentUser = this.currentUser;
         return $q.resolve(res.data[0]);
       })
       .catch(res => {

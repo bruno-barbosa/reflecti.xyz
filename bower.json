@@ -23,6 +23,7 @@
     "bower": "*",
     "install": "^1.0.4",
     "ng-sweet-alert": "^1.0.5",
-    "ngSweetAlert": "angular-sweetalert#^1.1.0"
+    "ngSweetAlert": "angular-sweetalert#^1.1.0",
+    "webui-popover": "^1.2.8"
   }
 }

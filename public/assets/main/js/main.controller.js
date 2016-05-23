@@ -4,14 +4,22 @@ var app = angular.module('reflectiXYZ');
 
 app.controller('mainCtrl', function($scope, $state, $auth, Auth, $rootScope) {
 
-    $rootScope.currentUser = Auth.currentUser;
-    console.log($scope.currentUser);
+    $rootScope.$on('$stateChangeStart',
+      function(event, toState, toParams, fromState, fromParams){
+        if(event.name === '$stateChangeStart'){
+          Auth.getProfile()
+          .then(user => {
+            $rootScope.currentUser = user;
+          });
+        }
+    });
 
     $('.modal-trigger').leanModal();
     $('.parallax').parallax();
     $('.button-collapse').sideNav();
     $('#loginDrop').webuiPopover({
-        url: '#logRegForm'
+        url: '#logRegForm',
+        animation:'pop'
     });
     $('.carousel').carousel({
         full_width: false
