@@ -20,7 +20,6 @@ app.controller('wallListCtrl', function($scope, $state, Upload, Wall) {
         });
       }
 
-
       console.log('YOOO',$scope.posts);
     })
     .catch( err => {
