@@ -1,16 +1,17 @@
-<div class="row" style="margin-top:180px">
+<div class="row" style="margin-top:10px">
     <div class="row">
-        <div class="col m6 offset-m2">
+        <div class="col m4 offset-m1">
             <span ng-bind-html="emotionUNICODE"></span>
             <h4>{{wall.caption}}</h4>
         </div>
-        <div class="col m2 right-align">
+        <div class="col m6 right-align">
             <h4 style="color:green"><i>Posted by: {{wall._owner.firstName}}</i></h4>
         </div>
+
     </div>
 
     <div class="row">
-        <div class="col m6 offset-m3">
+        <div class="col m10 offset-m1">
             <div class="row center">
 
                 <div class="row center-align">
@@ -22,7 +23,7 @@
                 </div>
             </div>
             <div class="card-content reactions">
-                <div ng-repeat="reaction in wall.reactions"><img ng-src="{{ reaction.reactionUrl }}" class="reactionImg"></div>
+                <span ng-repeat="reaction in wall.reactions"><img ng-src="{{ reaction.reactionUrl }}" class="reactionImg"></span>
             </div>
         </div>
     </div>
