@@ -124,5 +124,8 @@ wallSchema.statics.addReaction = (userId, wallId, reactionObj, cb) => {
 };
 
 
+
+
+
 const Wall = mongoose.model('Wall', wallSchema);
 module.exports = Wall;

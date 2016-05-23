@@ -7,14 +7,10 @@
 
     <div class="col m6 offset-m2">
       <!-- <span ng-bind-html="emotionUNICODE"></span> -->
-      Posted by: <span>
-        <a href="">
-          @{{wall._owner}}
-        </a>
-      </span>
+      <h4>{{wall.caption}}</h4>
     </div>
     <div class="col m2 right-align">
-      {{wall.title}}
+      <h4 style="color:green"><i>Posted by: {{wall._owner.firstName}}</i></h4>
     </div>
 
 
@@ -25,8 +21,9 @@
           <img class="activator" ng-src="{{wall.mediaUrl}}">
         </div>
       </div>
-      <div class="reactions">
-        <span ng-repeat="reaction in wall.reactions"><img ng-src="{{ reaction.reactionUrl }}" alt="" class="reactionImg"></span>
+      <div class="card-content reactions">
+
+        <div ng-repeat="reaction in wall.reactions"><img ng-src="{{ reaction.reactionUrl }}" class="reactionImg"></div>
       </div>
 
       <div id="result">

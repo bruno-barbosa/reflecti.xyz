@@ -27,7 +27,7 @@ router.route('/')
 
 router.route('/:id')
     .get(User.authorization(), (req, res) => {
-      Wall.findOne({ _id: req.params.id }).populate('_owner', 'username')
+      Wall.findOne({ _id: req.params.id }).populate('_owner')
         .exec(res.handler);
     })
     .post(User.authorization(), (req, res) => {

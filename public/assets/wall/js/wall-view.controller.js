@@ -2,7 +2,7 @@
 
 var app = angular.module('reflectiXYZ');
 
-app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, wall, SweetAlert, Upload){
+app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, wall, SweetAlert, Upload, $state){
   console.log('wallViewCtrl');
   $scope.wall = wall.data;
 
@@ -38,9 +38,13 @@ app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, wall, Sw
                 cancelButtonText: 'No. Maybe next time.',
                 confirmButtonText: 'Let\'s post it'
               }, function(isConfirm) {
+                console.log('image', image);
                 Upload.upload({
                   url: `/walls/${wall.data._id}/addReaction`,
                   data: {newFile: image}
+                })
+                .then(() => {
+                  $state.go('wall-if-seen', { id: wall.data._id});
                 });
               });
           }
