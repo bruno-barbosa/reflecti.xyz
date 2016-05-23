@@ -10,8 +10,6 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
-require('dotenv').load();
-
 const app = express();
 
 // SET VIEW ENGINE
