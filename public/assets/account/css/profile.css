@@ -29,18 +29,22 @@ ul.tabs {
   margin-right: 10px;
   margin-left: 35px; }
 
-span {
-  position: absolute;
-  top: 300px;
-  font-size: 28px;
-  color: white; }
-
 .reaction-GIF-box {
   display: inline-block;
 }
 
 .reaction-GIF {
-  width: 220px;
+  width: 100px;
+  padding-left: 5px;
+  z-index: 1
+}
+
+.reaction-GIF-box .reaction-emotion {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  z-index: 100;
+  color: #FFF;
 }
 
 a.btn-floating.btn-large.waves-effect.waves-light.green.pull-right {
