@@ -47,7 +47,7 @@
 
             <div class="card-image center">
               <a ui-sref="wall-view({id:post._id})">
-                <img class="wall-list" src="{{post.mediaUrl}}" alt="{{post.caption}}" style="max-width:150px;height:auto; position:relative; left: 40px">
+                <img class="wall-list" src="{{post.mediaUrl}}" alt="{{post.caption}}" style="max-width:270px;height:auto; position:relative; left: 40px">
                 <p class="img-type circle flow-text"><{{mediaType |uppercase }}></p>
               </a>
             </div>
@@ -55,16 +55,23 @@
             <div class="card-action">
               <p class="truncate">{{post.caption}}</p>
               <p>{{post.reaction}}</p>
-              <div class="reaction-GIF-box" ng-repeat="reaction in post.reactions">
-                <img class="reaction-GIF" ng-src="{{reaction.reactionUrl}}" alt="{{reaction.emotion}}">
-                <div ng-if="reaction.emotion === 'happiness'" class="reaction-emotion happy">{{reaction.emotion | titlecase}}</div>
-                <div ng-if="reaction.emotion === 'anger'" class="reaction-emotion anger">{{reaction.emotion | titlecase}}</div>
-                <div ng-if="reaction.emotion === 'disgust'" class="reaction-emotion disgust">{{reaction.emotion | titlecase}}</div>
-                <div ng-if="reaction.emotion === 'neutral'" class="reaction-emotion neutral">{{reaction.emotion | titlecase}}</div>
-                <div ng-if="reaction.emotion === 'contempt'" class="reaction-emotion contempt">{{reaction.emotion | titlecase}}</div>
-                <div ng-if="reaction.emotion === 'fear'" class="reaction-emotion fear">{{reaction.emotion | titlecase}}</div>
-                <div ng-if="reaction.emotion === 'sadness'" class="reaction-emotion sadness">{{reaction.emotion | titlecase}}</div>
-                <div ng-if="reaction.emotion === 'surprise'" class="reaction-emotion surprise">{{reaction.emotion | titlecase}}</div>
+              <!-- <div class="reaction-GIF-box" ng-repeat="reaction in post.reactions">
+                <img class="reaction-GIF" ng-src="{{reaction.reactionUrl}}" alt="{{reaction.emotion}}"> -->
+                <div class="chip">
+                  {{happyCount}} 😀 Happy
+                </div>
+                <div class="chip">
+                  {{happyCount}} 😀 Happy
+                </div>
+                <div class="chip">
+                  {{happyCount}} 😀 Happy
+                </div>
+                <div class="chip">
+                  {{happyCount}} 😀 Happy
+                </div>
+                <div class="chip">
+                  {{happyCount}} 😀 Happy
+                </div>
               </div>
             </div>
           </div>
