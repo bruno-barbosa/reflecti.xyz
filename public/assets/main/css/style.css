@@ -43,7 +43,8 @@ main {
   -webkit-transition: -webkit-filter .30s;
   filter: blur(20px);
   transition: filter .30s;
-  width: 300px !important;
+  max-width: 270px;
+  /*width: 300px !important;*/
   height: 300px !important;
 }
 

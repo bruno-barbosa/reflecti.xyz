@@ -7,13 +7,21 @@ app.controller('wallListCtrl', function($scope, $state, Upload, Wall) {
   Wall.get()
     .then(res => {
 
-      for(var i in res.data) {
-        $scope.mediaType = res.data[i].mediaUrl.split('.').pop();
-      }
-
       $scope.posts = res.data;
 
-      console.log(res.data);
+      for(var i in res.data) {
+        $scope.mediaType = res.data[i].mediaUrl.split('.').pop();
+        res.data[i].emotionsArray = [];
+      }
+
+      for(var i = 0; i < $scope.posts.length; i++){
+        $scope.posts[i].reactions.forEach(reaction => {
+          $scope.posts[i].emotionsArray.push(reaction.emotion);
+        });
+      }
+
+
+      console.log('YOOO',$scope.posts);
     })
     .catch( err => {
       if(err) {
