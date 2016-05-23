@@ -121,9 +121,10 @@ footer.page-footer.blue.darken-4 {
     background-attachment: fixed;
     opacity: 10.0; } }*/
 
+
 .landingBg {
   background-image: url("../img/bg.jpeg");
-  background-size: 95%;
+  background-size: 101%;
 }
 
 .iphoneMockup {
@@ -172,7 +173,7 @@ nav .nav-wrapper {
 }
 
 .fa-camera-retro:before, #loginDrop, nav i, a {
-  color: #E9F1DF ;
+  color: #F2385A ;
 }
 
 footer.page-footer.blue.darken-4 {
@@ -189,4 +190,21 @@ footer.page-footer.blue.darken-4 {
 
 #register, #login {
   color: #F2385A !important;
+}
+
+nav ul a {
+  color: #F2385A !important;
+}
+
+input:not([type]).valid, input:not([type]):focus.valid, input[type=text].valid, input[type=text]:focus.valid, input[type=password].valid, input[type=password]:focus.valid, input[type=email].valid, input[type=email]:focus.valid, input[type=url].valid, input[type=url]:focus.valid, input[type=time].valid, input[type=time]:focus.valid, input[type=date].valid, input[type=date]:focus.valid, input[type=datetime].valid, input[type=datetime]:focus.valid, input[type=datetime-local].valid, input[type=datetime-local]:focus.valid, input[type=tel].valid, input[type=tel]:focus.valid, input[type=number].valid, input[type=number]:focus.valid, input[type=search].valid, input[type=search]:focus.valid, textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid {
+   border-bottom: 1px solid #F2385A;
+   box-shadow: 0 1px 0 0 #F2385A;
+}
+
+.tabs .tab a {
+  color: #F2385A;
+}
+
+.indicator {
+  display: none;
 }

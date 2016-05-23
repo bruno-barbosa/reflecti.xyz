@@ -35,7 +35,8 @@ app.controller('wallViewCtrl', function($scope, $stateParams, $timeout, wall, Sw
                 text: `<img src="${image}" />`,
                 showCancelButton: true,
                 cancelButtonText: 'No. Maybe next time.',
-                confirmButtonText: 'Let\'s post it'
+                confirmButtonText: 'Let\'s post it',
+                confirmButtonColor: "#F2385A"
               }, function(isConfirm) {
                 Upload.upload({
                   url: `/walls/${wall.data._id}/addReaction`,
