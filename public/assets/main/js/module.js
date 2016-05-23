@@ -18,12 +18,7 @@ app.config( function($stateProvider, $urlRouterProvider, $authProvider) {
     .state('profile-walls', {
        url: '/profile-walls',
        templateUrl: '/assets/account/html/profile.html',
-       controller: 'profileCtrl',
-       resolve: {
-         profile: function(Auth) {
-           return Auth.getProfile();
-         }
-       }
+       controller: 'profileCtrl'
      })
      .state('profile-reactions', {
        url: '/profile-reactions',

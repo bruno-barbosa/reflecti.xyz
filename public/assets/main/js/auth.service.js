@@ -4,6 +4,8 @@ var app = angular.module('reflectiXYZ');
 
 app.service('Auth', function($http, $q) {
 
+  
+
   this.register = userObj => {
     return $http.post('/users/register', userObj);
   };
@@ -29,6 +31,7 @@ app.service('Auth', function($http, $q) {
     return $http.get('/users/profile')
       .then(res => {
         this.currentUser = res.data[0];
+        return $q.resolve(res.data[0]);
       })
       .catch(res => {
         this.currentUser = null;

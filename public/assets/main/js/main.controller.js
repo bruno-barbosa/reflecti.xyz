@@ -4,7 +4,8 @@ var app = angular.module('reflectiXYZ');
 
 app.controller('mainCtrl', function($scope, $state, $auth, Auth, $rootScope) {
 
-  // swal({   title: "Error!",   text: "Here's my error message!",   type: "error",   confirmButtonText: "Cool" });
+    $rootScope.currentUser = Auth.currentUser;
+    console.log($scope.currentUser);
 
     $('.modal-trigger').leanModal();
     $('.parallax').parallax();
