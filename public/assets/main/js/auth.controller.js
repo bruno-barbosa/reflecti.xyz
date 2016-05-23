@@ -19,7 +19,7 @@ app.controller('authCtrl', function($scope, $state, $auth, $rootScope, Auth) {
       .then(res => {
         $rootScope.currentUser = res;
         console.log('TEST');
-        $('a').webuiPopover('hide');
+        $('#loginDrop').webuiPopover('hide');
         $state.go('wall-list');
       })
       .catch(err => {
@@ -32,7 +32,7 @@ app.controller('authCtrl', function($scope, $state, $auth, $rootScope, Auth) {
   		.then(function(res) {
   		$rootScope.currentUser = res.data;
       console.log('TEST');
-      $('a').webuiPopover('hide');
+      $('#loginDrop').webuiPopover('hide');
   		$state.go('wall-list');
   	})
   		.catch(function(response) {
