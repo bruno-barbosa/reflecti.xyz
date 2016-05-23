@@ -57,33 +57,35 @@
               <p>{{post.reaction}}</p>
               <!-- <div class="reaction-GIF-box" ng-repeat="reaction in post.reactions">
                 <img class="reaction-GIF" ng-src="{{reaction.reactionUrl}}" alt="{{reaction.emotion}}"> -->
-                <div class="chip">
-                  {{happyCount}} 😀 Happy
+
+                <div ng-if="post.emotionsLibrary.happiness" class="chip">
+                  😀 Happy {{post.emotionsLibrary.happiness}}
                 </div>
-                <div class="chip">
-                  {{sadCount}} 😢 Sad
+                <div ng-if="post.emotionsLibrary.sadness" class="chip">
+                  😢 Sad {{post.emotionsLibrary.sadness}}
                 </div>
-                <div class="chip">
-                  {{angerCount}} 😡 Anger
+                <div ng-if="post.emotionsLibrary.anger" class="chip">
+                  😡 Anger {{post.emotionsLibrary.anger}}
                 </div>
-                <div class="chip">
-                  {{neutralCount}} 😐 Neutral
+                <div ng-if="post.emotionsLibrary.neutral" class="chip">
+                  😐 Neutral {{post.emotionsLibrary.neutral}}
                 </div>
-                <div class="chip">
-                  {{contemptCount}} 🙂 Contempt
+                <div ng-if="post.emotionsLibrary.contempt" class="chip">
+                  🙂 Contempt {{post.emotionsLibrary.contempt}}
                 </div>
-                <div class="chip">
-                  {{disgustCount}} 😷 Disgust
+                <div ng-if="post.emotionsLibrary.disgust" class="chip">
+                  😷 Disgust {{post.emotionsLibrary.disgust}}
                 </div>
-                <div class="chip">
-                  {{surpriseCount}} 😯 Surprise
+                <div ng-if="post.emotionsLibrary.surprise" class="chip">
+                  😯 Surprise {{post.emotionsLibrary.surprise}}
                 </div>
-                <div class="chip">
-                  {{fearCount}} 😨 Fear
+                <div ng-if="post.emotionsLibrary.fear" class="chip">
+                  😨 Fear {{post.emotionsLibrary.fear}}
                 </div>
-                <div class="chip">
-                  {{unknownCount}} 😶 Unknown
+                <div ng-if="post.emotionsLibrary.unknown" class="chip">
+                  😶 Unknown {{post.emotionsLibrary.unknown}}
                 </div>
+
               </div>
             </div>
           </div>

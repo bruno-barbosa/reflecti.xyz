@@ -166,6 +166,12 @@ footer.page-footer.blue.darken-4 {
   color: #000040;
 }
 
+.chip {
+  color: black;
+  margin: 5px;
+  font-size: 18px;
+}
+
 .gray-text{
   color: #696969;
 }
