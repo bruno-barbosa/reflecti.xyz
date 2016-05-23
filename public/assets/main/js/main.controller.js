@@ -9,6 +9,7 @@ app.controller('mainCtrl', function($scope, $state, $auth, Auth, $rootScope) {
         if(event.name === '$stateChangeStart'){
           Auth.getProfile()
           .then(user => {
+            $rootScope.currentUser = null;
             $rootScope.currentUser = user;
           });
         }

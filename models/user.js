@@ -39,8 +39,10 @@ userSchema.statics.register = (userObj, cb) => {
         email: userObj.email,
         password: hash,
       });
+      console.log(user);
 
       user.save((err, savedUser) => {
+        console.log(err);
         savedUser.password = null;
         cb(null, savedUser);
       });

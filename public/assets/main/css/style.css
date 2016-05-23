@@ -58,6 +58,10 @@ main {
   height: 600px !important;
 }
 
+.card .card-image img {
+  display: inline;
+}
+
 .card-image .img-type {
   position: absolute;
   top: 33%;
@@ -80,6 +84,9 @@ main {
   border-color: #fff;
 }
 
+.card-action {
+    height: 180px;
+}
 /*.card-image img:active {
   -webkit-filter: none;
   -webkit-transition: -webkit-filter .30s;

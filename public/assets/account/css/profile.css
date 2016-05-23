@@ -16,6 +16,10 @@ span.profile-name {
   font-size: 28px;
   color: white; }
 
+  .card-action.reacts {
+      height: 300px;
+  }
+
 .col.s12.nav {
   padding: 0; }
 

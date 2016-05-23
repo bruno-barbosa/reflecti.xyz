@@ -29,7 +29,6 @@ app.service('Auth', function($http, $q, $rootScope) {
     return $http.get('/users/profile')
       .then(res => {
         // this.currentUser = res.data[0];
-        // $rootScope.currentUser = this.currentUser;
         return $q.resolve(res.data[0]);
       })
       .catch(res => {
