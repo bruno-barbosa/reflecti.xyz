@@ -94,20 +94,6 @@ footer.page-footer.blue.darken-4 {
     margin-top: 0;
 }
 
-.reaction-emotion.happy {
-    background-color: rgba(255, 214, 0, 0.97);
-    color: #02AB58;
-}
-.reaction-emotion.sadness {
-    background-color: #00C2FF;
-    color: white;
-}
-
-.reaction-emotion.anger,  .reaction-emotion.fear {
-    background-color: red;
-}
-
-
 .fb-blue {
   background-color: #3b5998 !important; }
 

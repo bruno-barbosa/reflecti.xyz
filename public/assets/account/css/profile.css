@@ -31,20 +31,50 @@ ul.tabs {
 
 .reaction-GIF-box {
   display: inline-block;
+  /*border: 2px solid black;*/
+  padding: 5px;
+  margin-bottom: 10px;
+  /*border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;*/
 }
 
 .reaction-GIF {
   width: 100px;
-  padding-left: 5px;
   z-index: 1
 }
 
 .reaction-GIF-box .reaction-emotion {
     display: block;
     text-align: center;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 2px solid black;
 }
 
 a.btn-floating.btn-large.waves-effect.waves-light.green.pull-right {
     margin-top: 30px;
     margin-right: 30px;
+}
+
+.reaction-emotion.neutral {
+    background-color: gray;
+    color: white;
+}
+
+.reaction-emotion.happy {
+    background-color: rgba(255, 237, 0, 0.97);
+    color: #02AB58;
+}
+.reaction-emotion.sadness {
+    background-color: #00C2FF;
+    color: white;
+}
+
+.reaction-emotion.anger,  .reaction-emotion.fear {
+    background-color: red;
+}
+
+.reaction-emotion.surprise, .reaction-emotion.disgust {
+    background-color: #02AB58;
+    color: #FFED07;
 }
